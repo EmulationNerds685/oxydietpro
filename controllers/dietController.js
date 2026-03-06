@@ -7,6 +7,7 @@ import {
 import { calculateMacros } from "../services/macroService.js";
 import { distributeMeals } from "../services/mealDistributionService.js";
 import { buildMeals } from "../services/mealBuilderService.js";
+import { validateDietInput } from "../utils/validators.js";
 
 
 // Convert height to cm if given in feet
@@ -18,6 +19,17 @@ const convertHeightToCm = (height) => {
 
 export const generateDiet = async (req, res) => {
   try {
+    // 🔹 Input Validation
+    const validation = validateDietInput(req.body);
+
+    if (!validation.valid) {
+      return res.status(400).json({
+        success: false,
+        message: "Validation failed",
+        errors: validation.errors,
+      });
+    }
+
     const {
       name,
       age,
@@ -30,32 +42,15 @@ export const generateDiet = async (req, res) => {
       mealsPerDay,
     } = req.body;
 
-    // 🔹 Basic Validation
-    if (
-      !name ||
-      !age ||
-      !gender ||
-      !height ||
-      !weight ||
-      !goal ||
-      !activityLevel ||
-      !dietType ||
-      !mealsPerDay
-    ) {
-      return res.status(400).json({
-        message: "All fields are required",
-      });
-    }
-
-    const heightInCm = convertHeightToCm(height);
+    const heightInCm = convertHeightToCm(Number(height));
 
     const userData = {
-      age,
-      gender,
+      age: Number(age),
+      gender: gender.toLowerCase(),
       height: heightInCm,
-      weight,
-      goal,
-      activityLevel,
+      weight: Number(weight),
+      goal: goal.toLowerCase(),
+      activityLevel: activityLevel.toLowerCase(),
     };
 
     // =========================
@@ -63,18 +58,18 @@ export const generateDiet = async (req, res) => {
     // =========================
 
     const bmr = calculateBMR(userData);
-    const tdee = calculateTDEE(bmr, activityLevel);
+    const tdee = calculateTDEE(bmr, userData.activityLevel);
 
     let totalCalories = Math.round(
-      adjustCaloriesByGoal(tdee, goal)
+      adjustCaloriesByGoal(tdee, userData.goal)
     );
 
     // 🔥 Safety calorie floor
-    if (gender.toLowerCase() === "female" && totalCalories < 1400) {
+    if (userData.gender === "female" && totalCalories < 1400) {
       totalCalories = 1400;
     }
 
-    if (gender.toLowerCase() === "male" && totalCalories < 1600) {
+    if (userData.gender === "male" && totalCalories < 1600) {
       totalCalories = 1600;
     }
 
@@ -83,9 +78,9 @@ export const generateDiet = async (req, res) => {
     // =========================
 
     const macros = calculateMacros(totalCalories, {
-      weight,
-      goal,
-      gender,
+      weight: userData.weight,
+      goal: userData.goal,
+      gender: userData.gender,
     });
 
     // =========================
@@ -95,33 +90,38 @@ export const generateDiet = async (req, res) => {
     const mealTargets = distributeMeals(
       totalCalories,
       macros,
-      mealsPerDay
+      Number(mealsPerDay)
     );
 
     // =========================
     // BUILD MEALS
     // =========================
 
-    const meals = buildMeals(mealTargets, dietType);
+    const meals = buildMeals(mealTargets, dietType.toLowerCase());
 
     // =========================
     // FINAL RESPONSE
     // =========================
 
     const finalDiet = {
-      name,
+      name: name.trim(),
       totalCalories,
       macros,
       meals,
     };
 
-    return res.json(finalDiet);
+    return res.json({
+      success: true,
+      data: finalDiet,
+    });
 
   } catch (error) {
     console.error("Diet Generation Error:", error.message);
 
     return res.status(500).json({
+      success: false,
       message: "Failed to generate diet plan",
+      error: error.message,
     });
   }
 };

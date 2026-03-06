@@ -1,16 +1,15 @@
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv"; // 1. Import dotenv
+import dotenv from "dotenv";
 import dietRoutes from "./routes/dietRoutes.js";
 
-// 2. Load environment variables
 dotenv.config();
 
 const app = express();
 
-// 3. Configure CORS with your .env variable
+// CORS
 const corsOptions = {
-  origin: process.env.FRONTEND_URL, 
+  origin: process.env.FRONTEND_URL,
   optionsSuccessStatus: 200
 };
 
@@ -20,16 +19,29 @@ app.use(express.json());
 // 🔹 Routes
 app.use("/api/diet", dietRoutes);
 
-// 🔹 Health Check Route
+// 🔹 Health Check
 app.get("/", (req, res) => {
-  res.send("OXYGEN GYM Diet Generator API Running 🚀");
+  res.json({
+    success: true,
+    message: "OXYGEN GYM Diet Generator API Running 🚀",
+  });
+});
+
+// 🔹 404 Handler
+app.use((req, res) => {
+  res.status(404).json({
+    success: false,
+    message: `Route not found: ${req.method} ${req.originalUrl}`,
+  });
 });
 
 // 🔹 Global Error Handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({
-    message: "Something went wrong",
+    success: false,
+    message: "Internal server error",
+    error: process.env.NODE_ENV === "development" ? err.message : undefined,
   });
 });
 

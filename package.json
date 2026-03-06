@@ -1,9 +1,11 @@
 {
   "name": "oxydiet-pro",
   "version": "1.0.0",
-  "description": "",
+  "description": "OXYGEN GYM Diet Plan Generator API",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,7 +15,9 @@
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
-    "express": "^5.2.1",
-    "puppeteer": "^24.37.5"
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
