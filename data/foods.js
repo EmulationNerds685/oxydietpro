@@ -1,7 +1,7 @@
 export const foods = [
 
   // =========================
-  // 🥣 BREAKFAST CARBS (VEG)
+  // 🌾 CARBS
   // =========================
   {
     name: "Oats",
@@ -9,9 +9,12 @@ export const foods = [
     protein: 17,
     carbs: 66,
     fats: 7,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["breakfast", "snack"]
+    mealType: ["breakfast","snack"],
+    minServing: 40,
+    maxServing: 120,
+    priority: 9
   },
   {
     name: "Poha",
@@ -19,9 +22,12 @@ export const foods = [
     protein: 2.5,
     carbs: 28,
     fats: 1,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["breakfast"]
+    mealType: ["breakfast"],
+    minServing: 100,
+    maxServing: 250,
+    priority: 5
   },
   {
     name: "Daliya",
@@ -29,9 +35,12 @@ export const foods = [
     protein: 12,
     carbs: 72,
     fats: 2,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["breakfast"]
+    mealType: ["breakfast"],
+    minServing: 40,
+    maxServing: 100,
+    priority: 5
   },
   {
     name: "Brown Bread",
@@ -39,9 +48,12 @@ export const foods = [
     protein: 9,
     carbs: 49,
     fats: 3,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["breakfast", "snack"]
+    mealType: ["breakfast","snack"],
+    minServing: 50,
+    maxServing: 150,
+    priority: 7
   },
   {
     name: "Idli",
@@ -49,9 +61,12 @@ export const foods = [
     protein: 4,
     carbs: 30,
     fats: 1.5,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["breakfast"]
+    mealType: ["breakfast"],
+    minServing: 100,
+    maxServing: 250,
+    priority: 5
   },
   {
     name: "Upma",
@@ -59,9 +74,12 @@ export const foods = [
     protein: 4,
     carbs: 26,
     fats: 4,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["breakfast"]
+    mealType: ["breakfast"],
+    minServing: 100,
+    maxServing: 250,
+    priority: 5
   },
   {
     name: "Muesli",
@@ -69,23 +87,25 @@ export const foods = [
     protein: 9,
     carbs: 68,
     fats: 5,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["breakfast"]
+    mealType: ["breakfast"],
+    minServing: 40,
+    maxServing: 100,
+    priority: 4
   },
-
-  // =========================
-  // 🍚 LUNCH / DINNER CARBS (VEG)
-  // =========================
   {
     name: "White Rice",
     caloriesPer100g: 130,
     protein: 2.7,
     carbs: 28,
     fats: 0.3,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 80,
+    maxServing: 250,
+    priority: 10
   },
   {
     name: "Brown Rice",
@@ -93,9 +113,12 @@ export const foods = [
     protein: 2.6,
     carbs: 23,
     fats: 0.9,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 80,
+    maxServing: 250,
+    priority: 9
   },
   {
     name: "Roti",
@@ -103,9 +126,12 @@ export const foods = [
     protein: 11,
     carbs: 57,
     fats: 3,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 40,
+    maxServing: 150,
+    priority: 9
   },
   {
     name: "Sweet Potato",
@@ -113,9 +139,12 @@ export const foods = [
     protein: 1.6,
     carbs: 20,
     fats: 0.1,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["lunch", "snack"]
+    mealType: ["lunch","snack"],
+    minServing: 100,
+    maxServing: 250,
+    priority: 7
   },
   {
     name: "Paratha",
@@ -123,9 +152,12 @@ export const foods = [
     protein: 8,
     carbs: 50,
     fats: 10,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["breakfast", "lunch", "dinner"]
+    mealType: ["breakfast","lunch","dinner"],
+    minServing: 60,
+    maxServing: 180,
+    priority: 5
   },
   {
     name: "Bajra Roti",
@@ -133,9 +165,12 @@ export const foods = [
     protein: 12,
     carbs: 67,
     fats: 5,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 45,
+    maxServing: 150,
+    priority: 6
   },
   {
     name: "Quinoa",
@@ -143,9 +178,12 @@ export const foods = [
     protein: 4.4,
     carbs: 21,
     fats: 1.9,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 100,
+    maxServing: 250,
+    priority: 3
   },
   {
     name: "Sabudana Khichdi",
@@ -153,13 +191,16 @@ export const foods = [
     protein: 1.5,
     carbs: 82,
     fats: 2,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "carb",
-    mealType: ["breakfast", "snack"]
+    mealType: ["breakfast","snack"],
+    minServing: 100,
+    maxServing: 250,
+    priority: 3
   },
 
   // =========================
-  // 🥩 PROTEIN SOURCES (VEG)
+  // 🧀 VEG PROTEIN
   // =========================
   {
     name: "Paneer",
@@ -167,9 +208,12 @@ export const foods = [
     protein: 18,
     carbs: 2,
     fats: 20,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 50,
+    maxServing: 150,
+    priority: 8
   },
   {
     name: "Tofu",
@@ -177,9 +221,12 @@ export const foods = [
     protein: 17,
     carbs: 3,
     fats: 9,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 75,
+    maxServing: 200,
+    priority: 6
   },
   {
     name: "Rajma",
@@ -187,9 +234,12 @@ export const foods = [
     protein: 8.7,
     carbs: 22,
     fats: 0.5,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "protein",
-    mealType: ["lunch"]
+    mealType: ["lunch"],
+    minServing: 80,
+    maxServing: 200,
+    priority: 8
   },
   {
     name: "Chole",
@@ -197,9 +247,12 @@ export const foods = [
     protein: 9,
     carbs: 27,
     fats: 2.6,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "protein",
-    mealType: ["lunch"]
+    mealType: ["lunch"],
+    minServing: 80,
+    maxServing: 200,
+    priority: 8
   },
   {
     name: "Moong Dal",
@@ -207,9 +260,12 @@ export const foods = [
     protein: 7,
     carbs: 19,
     fats: 0.4,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 80,
+    maxServing: 200,
+    priority: 8
   },
   {
     name: "Soya Chunks",
@@ -217,9 +273,12 @@ export const foods = [
     protein: 52,
     carbs: 33,
     fats: 0.5,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 20,
+    maxServing: 60,
+    priority: 6
   },
   {
     name: "Curd",
@@ -227,59 +286,12 @@ export const foods = [
     protein: 3.5,
     carbs: 4.7,
     fats: 3.3,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "protein",
-    mealType: ["breakfast", "dinner", "snack"]
-  },
-  {
-    name: "Whey Protein",
-    caloriesPer100g: 400,
-    protein: 80,
-    carbs: 10,
-    fats: 5,
-    dietType: "veg",
-    macroType: "protein",
-    mealType: ["snack", "pre-workout"]
-  },
-  {
-    name: "Chana Dal",
-    caloriesPer100g: 360,
-    protein: 22,
-    carbs: 60,
-    fats: 5,
-    dietType: "veg",
-    macroType: "protein",
-    mealType: ["lunch", "dinner"]
-  },
-  {
-    name: "Toor Dal",
-    caloriesPer100g: 343,
-    protein: 22,
-    carbs: 63,
-    fats: 1.5,
-    dietType: "veg",
-    macroType: "protein",
-    mealType: ["lunch", "dinner"]
-  },
-  {
-    name: "Masoor Dal",
-    caloriesPer100g: 352,
-    protein: 25,
-    carbs: 60,
-    fats: 1,
-    dietType: "veg",
-    macroType: "protein",
-    mealType: ["lunch", "dinner"]
-  },
-  {
-    name: "Sprouts (Moong)",
-    caloriesPer100g: 31,
-    protein: 3,
-    carbs: 4,
-    fats: 0.2,
-    dietType: "veg",
-    macroType: "protein",
-    mealType: ["breakfast", "snack"]
+    mealType: ["breakfast","snack","dinner"],
+    minServing: 100,
+    maxServing: 250,
+    priority: 7
   },
   {
     name: "Greek Yogurt",
@@ -287,9 +299,12 @@ export const foods = [
     protein: 10,
     carbs: 3.6,
     fats: 0.7,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "protein",
-    mealType: ["breakfast", "snack"]
+    mealType: ["breakfast","snack"],
+    minServing: 100,
+    maxServing: 200,
+    priority: 7
   },
   {
     name: "Cottage Cheese (Low Fat)",
@@ -297,151 +312,29 @@ export const foods = [
     protein: 11,
     carbs: 3.4,
     fats: 4.3,
-    dietType: "veg",
+    dietType: ["veg","nonveg"],
     macroType: "protein",
-    mealType: ["breakfast", "snack"]
+    mealType: ["breakfast","snack"],
+    minServing: 100,
+    maxServing: 200,
+    priority: 5
   },
 
   // =========================
-  // 🥜 HEALTHY FATS (VEG)
+  // 🍗 NON VEG PROTEIN
   // =========================
-  {
-    name: "Peanut Butter",
-    caloriesPer100g: 588,
-    protein: 25,
-    carbs: 20,
-    fats: 50,
-    dietType: "veg",
-    macroType: "fat",
-    mealType: ["breakfast", "snack"]
-  },
-  {
-    name: "Almonds",
-    caloriesPer100g: 579,
-    protein: 21,
-    carbs: 22,
-    fats: 50,
-    dietType: "veg",
-    macroType: "fat",
-    mealType: ["snack"]
-  },
-  {
-    name: "Mixed Nuts",
-    caloriesPer100g: 607,
-    protein: 20,
-    carbs: 21,
-    fats: 54,
-    dietType: "veg",
-    macroType: "fat",
-    mealType: ["snack"]
-  },
-  {
-    name: "Ghee",
-    caloriesPer100g: 900,
-    protein: 0,
-    carbs: 0,
-    fats: 100,
-    dietType: "veg",
-    macroType: "fat",
-    mealType: ["lunch", "dinner"]
-  },
-  {
-    name: "Flaxseeds",
-    caloriesPer100g: 534,
-    protein: 18,
-    carbs: 29,
-    fats: 42,
-    dietType: "veg",
-    macroType: "fat",
-    mealType: ["breakfast", "snack"]
-  },
-  {
-    name: "Walnuts",
-    caloriesPer100g: 654,
-    protein: 15,
-    carbs: 14,
-    fats: 65,
-    dietType: "veg",
-    macroType: "fat",
-    mealType: ["snack"]
-  },
-  {
-    name: "Coconut Oil",
-    caloriesPer100g: 862,
-    protein: 0,
-    carbs: 0,
-    fats: 100,
-    dietType: "veg",
-    macroType: "fat",
-    mealType: ["lunch", "dinner"]
-  },
-
-  // =========================
-  // 🍎 FRUITS (VEG)
-  // =========================
-  {
-    name: "Banana",
-    caloriesPer100g: 89,
-    protein: 1.1,
-    carbs: 23,
-    fats: 0.3,
-    dietType: "veg",
-    macroType: "carb",
-    mealType: ["breakfast", "snack", "pre-workout"]
-  },
-  {
-    name: "Apple",
-    caloriesPer100g: 52,
-    protein: 0.3,
-    carbs: 14,
-    fats: 0.2,
-    dietType: "veg",
-    macroType: "carb",
-    mealType: ["snack"]
-  },
-  {
-    name: "Mango",
-    caloriesPer100g: 60,
-    protein: 0.8,
-    carbs: 15,
-    fats: 0.4,
-    dietType: "veg",
-    macroType: "carb",
-    mealType: ["snack", "breakfast"]
-  },
-  {
-    name: "Papaya",
-    caloriesPer100g: 43,
-    protein: 0.5,
-    carbs: 11,
-    fats: 0.3,
-    dietType: "veg",
-    macroType: "carb",
-    mealType: ["breakfast", "snack"]
-  },
-  {
-    name: "Watermelon",
-    caloriesPer100g: 30,
-    protein: 0.6,
-    carbs: 8,
-    fats: 0.2,
-    dietType: "veg",
-    macroType: "carb",
-    mealType: ["snack"]
-  },
-
-  // ==========================================
-  // 🍗 NON-VEG PROTEIN SOURCES
-  // ==========================================
   {
     name: "Chicken Breast (Grilled)",
     caloriesPer100g: 165,
     protein: 31,
     carbs: 0,
     fats: 3.6,
-    dietType: "nonveg",
+    dietType: ["nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 80,
+    maxServing: 200,
+    priority: 10
   },
   {
     name: "Chicken Thigh",
@@ -449,9 +342,12 @@ export const foods = [
     protein: 26,
     carbs: 0,
     fats: 11,
-    dietType: "nonveg",
+    dietType: ["nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 80,
+    maxServing: 200,
+    priority: 7
   },
   {
     name: "Boiled Eggs",
@@ -459,9 +355,12 @@ export const foods = [
     protein: 13,
     carbs: 1.1,
     fats: 11,
-    dietType: "nonveg",
+    dietType: ["nonveg"],
     macroType: "protein",
-    mealType: ["breakfast", "snack"]
+    mealType: ["breakfast","snack"],
+    minServing: 50,
+    maxServing: 200,
+    priority: 10
   },
   {
     name: "Egg Whites",
@@ -469,9 +368,12 @@ export const foods = [
     protein: 11,
     carbs: 0.7,
     fats: 0.2,
-    dietType: "nonveg",
+    dietType: ["nonveg"],
     macroType: "protein",
-    mealType: ["breakfast", "snack"]
+    mealType: ["breakfast","snack"],
+    minServing: 60,
+    maxServing: 240,
+    priority: 10
   },
   {
     name: "Rohu Fish (Grilled)",
@@ -479,9 +381,12 @@ export const foods = [
     protein: 17,
     carbs: 0,
     fats: 3,
-    dietType: "nonveg",
+    dietType: ["nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 100,
+    maxServing: 250,
+    priority: 6
   },
   {
     name: "Pomfret Fish",
@@ -489,9 +394,12 @@ export const foods = [
     protein: 19,
     carbs: 0,
     fats: 2,
-    dietType: "nonveg",
+    dietType: ["nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 100,
+    maxServing: 250,
+    priority: 6
   },
   {
     name: "Prawns",
@@ -499,9 +407,12 @@ export const foods = [
     protein: 24,
     carbs: 0.2,
     fats: 0.3,
-    dietType: "nonveg",
+    dietType: ["nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 80,
+    maxServing: 200,
+    priority: 5
   },
   {
     name: "Mutton (Lean)",
@@ -509,9 +420,12 @@ export const foods = [
     protein: 25,
     carbs: 0,
     fats: 16,
-    dietType: "nonveg",
+    dietType: ["nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 80,
+    maxServing: 150,
+    priority: 4
   },
   {
     name: "Chicken Curry",
@@ -519,9 +433,12 @@ export const foods = [
     protein: 18,
     carbs: 5,
     fats: 7,
-    dietType: "nonveg",
+    dietType: ["nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 150,
+    maxServing: 300,
+    priority: 7
   },
   {
     name: "Fish Curry",
@@ -529,9 +446,12 @@ export const foods = [
     protein: 15,
     carbs: 4,
     fats: 5,
-    dietType: "nonveg",
+    dietType: ["nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 150,
+    maxServing: 300,
+    priority: 6
   },
   {
     name: "Egg Bhurji",
@@ -539,9 +459,12 @@ export const foods = [
     protein: 12,
     carbs: 2,
     fats: 13,
-    dietType: "nonveg",
+    dietType: ["nonveg"],
     macroType: "protein",
-    mealType: ["breakfast", "lunch"]
+    mealType: ["breakfast","lunch"],
+    minServing: 100,
+    maxServing: 200,
+    priority: 8
   },
   {
     name: "Tandoori Chicken",
@@ -549,127 +472,29 @@ export const foods = [
     protein: 28,
     carbs: 3,
     fats: 3,
-    dietType: "nonveg",
+    dietType: ["nonveg"],
     macroType: "protein",
-    mealType: ["lunch", "dinner"]
-  },
-  {
-    name: "Whey Protein (Non-Veg)",
-    caloriesPer100g: 400,
-    protein: 80,
-    carbs: 10,
-    fats: 5,
-    dietType: "nonveg",
-    macroType: "protein",
-    mealType: ["snack", "pre-workout"]
+    mealType: ["lunch","dinner"],
+    minServing: 100,
+    maxServing: 250,
+    priority: 7
   },
 
-  // ==========================================
-  // 🍚 NON-VEG CARBS
-  // ==========================================
-  {
-    name: "Oats",
-    caloriesPer100g: 389,
-    protein: 17,
-    carbs: 66,
-    fats: 7,
-    dietType: "nonveg",
-    macroType: "carb",
-    mealType: ["breakfast", "snack"]
-  },
-  {
-    name: "Brown Bread",
-    caloriesPer100g: 265,
-    protein: 9,
-    carbs: 49,
-    fats: 3,
-    dietType: "nonveg",
-    macroType: "carb",
-    mealType: ["breakfast", "snack"]
-  },
-  {
-    name: "White Rice",
-    caloriesPer100g: 130,
-    protein: 2.7,
-    carbs: 28,
-    fats: 0.3,
-    dietType: "nonveg",
-    macroType: "carb",
-    mealType: ["lunch", "dinner"]
-  },
-  {
-    name: "Brown Rice",
-    caloriesPer100g: 111,
-    protein: 2.6,
-    carbs: 23,
-    fats: 0.9,
-    dietType: "nonveg",
-    macroType: "carb",
-    mealType: ["lunch", "dinner"]
-  },
-  {
-    name: "Roti",
-    caloriesPer100g: 297,
-    protein: 11,
-    carbs: 57,
-    fats: 3,
-    dietType: "nonveg",
-    macroType: "carb",
-    mealType: ["lunch", "dinner"]
-  },
-  {
-    name: "Sweet Potato",
-    caloriesPer100g: 86,
-    protein: 1.6,
-    carbs: 20,
-    fats: 0.1,
-    dietType: "nonveg",
-    macroType: "carb",
-    mealType: ["lunch", "snack"]
-  },
-  {
-    name: "Paratha",
-    caloriesPer100g: 326,
-    protein: 8,
-    carbs: 50,
-    fats: 10,
-    dietType: "nonveg",
-    macroType: "carb",
-    mealType: ["breakfast", "lunch", "dinner"]
-  },
-  {
-    name: "Banana",
-    caloriesPer100g: 89,
-    protein: 1.1,
-    carbs: 23,
-    fats: 0.3,
-    dietType: "nonveg",
-    macroType: "carb",
-    mealType: ["breakfast", "snack", "pre-workout"]
-  },
-  {
-    name: "Poha",
-    caloriesPer100g: 130,
-    protein: 2.5,
-    carbs: 28,
-    fats: 1,
-    dietType: "nonveg",
-    macroType: "carb",
-    mealType: ["breakfast"]
-  },
-
-  // ==========================================
-  // 🥜 NON-VEG FATS
-  // ==========================================
+  // =========================
+  // 🥑 FATS
+  // =========================
   {
     name: "Peanut Butter",
     caloriesPer100g: 588,
     protein: 25,
     carbs: 20,
     fats: 50,
-    dietType: "nonveg",
+    dietType: ["veg","nonveg"],
     macroType: "fat",
-    mealType: ["breakfast", "snack"]
+    mealType: ["breakfast","snack"],
+    minServing: 10,
+    maxServing: 40,
+    priority: 7
   },
   {
     name: "Almonds",
@@ -677,9 +502,12 @@ export const foods = [
     protein: 21,
     carbs: 22,
     fats: 50,
-    dietType: "nonveg",
+    dietType: ["veg","nonveg"],
     macroType: "fat",
-    mealType: ["snack"]
+    mealType: ["snack"],
+    minServing: 10,
+    maxServing: 40,
+    priority: 7
   },
   {
     name: "Mixed Nuts",
@@ -687,9 +515,12 @@ export const foods = [
     protein: 20,
     carbs: 21,
     fats: 54,
-    dietType: "nonveg",
+    dietType: ["veg","nonveg"],
     macroType: "fat",
-    mealType: ["snack"]
+    mealType: ["snack"],
+    minServing: 10,
+    maxServing: 40,
+    priority: 6
   },
   {
     name: "Ghee",
@@ -697,9 +528,12 @@ export const foods = [
     protein: 0,
     carbs: 0,
     fats: 100,
-    dietType: "nonveg",
+    dietType: ["veg","nonveg"],
     macroType: "fat",
-    mealType: ["lunch", "dinner"]
+    mealType: ["lunch","dinner"],
+    minServing: 5,
+    maxServing: 20,
+    priority: 8
   },
   {
     name: "Flaxseeds",
@@ -707,8 +541,187 @@ export const foods = [
     protein: 18,
     carbs: 29,
     fats: 42,
-    dietType: "nonveg",
+    dietType: ["veg","nonveg"],
     macroType: "fat",
-    mealType: ["breakfast", "snack"]
+    mealType: ["breakfast","snack"],
+    minServing: 5,
+    maxServing: 20,
+    priority: 4
   },
+  {
+    name: "Walnuts",
+    caloriesPer100g: 654,
+    protein: 15,
+    carbs: 14,
+    fats: 65,
+    dietType: ["veg","nonveg"],
+    macroType: "fat",
+    mealType: ["snack"],
+    minServing: 10,
+    maxServing: 40,
+    priority: 5
+  },
+  {
+    name: "Coconut Oil",
+    caloriesPer100g: 862,
+    protein: 0,
+    carbs: 0,
+    fats: 100,
+    dietType: ["veg","nonveg"],
+    macroType: "fat",
+    mealType: ["lunch","dinner"],
+    minServing: 5,
+    maxServing: 15,
+    priority: 6
+  },
+// =========================
+// 🥦 VEGETABLES
+// =========================
+{
+  name: "Broccoli",
+  caloriesPer100g: 34,
+  protein: 2.8,
+  carbs: 7,
+  fats: 0.4,
+  dietType: ["veg","nonveg"],
+  macroType: "fiber",
+  mealType: ["lunch","dinner"],
+  minServing: 50,
+  maxServing: 200,
+  priority: 6
+},
+{
+  name: "Spinach",
+  caloriesPer100g: 23,
+  protein: 2.9,
+  carbs: 3.6,
+  fats: 0.4,
+  dietType: ["veg","nonveg"],
+  macroType: "fiber",
+  mealType: ["lunch","dinner"],
+  minServing: 50,
+  maxServing: 200,
+  priority: 7
+},
+{
+  name: "Carrot",
+  caloriesPer100g: 41,
+  protein: 0.9,
+  carbs: 10,
+  fats: 0.2,
+  dietType: ["veg","nonveg"],
+  macroType: "fiber",
+  mealType: ["lunch","dinner","snack"],
+  minServing: 50,
+  maxServing: 150,
+  priority: 6
+},
+{
+  name: "Cucumber",
+  caloriesPer100g: 15,
+  protein: 0.7,
+  carbs: 3.6,
+  fats: 0.1,
+  dietType: ["veg","nonveg"],
+  macroType: "fiber",
+  mealType: ["lunch","dinner","snack"],
+  minServing: 50,
+  maxServing: 200,
+  priority: 7
+},
+{
+  name: "Cabbage",
+  caloriesPer100g: 25,
+  protein: 1.3,
+  carbs: 6,
+  fats: 0.1,
+  dietType: ["veg","nonveg"],
+  macroType: "fiber",
+  mealType: ["lunch","dinner"],
+  minServing: 50,
+  maxServing: 200,
+  priority: 5
+},
+{
+  name: "Green Beans",
+  caloriesPer100g: 31,
+  protein: 1.8,
+  carbs: 7,
+  fats: 0.1,
+  dietType: ["veg","nonveg"],
+  macroType: "fiber",
+  mealType: ["lunch","dinner"],
+  minServing: 50,
+  maxServing: 150,
+  priority: 5
+},
+  // =========================
+  // 🍎 FRUITS
+  // =========================
+  {
+    name: "Banana",
+    caloriesPer100g: 89,
+    protein: 1.1,
+    carbs: 23,
+    fats: 0.3,
+    dietType: ["veg","nonveg"],
+    macroType: "carb",
+    mealType: ["breakfast","snack","pre-workout"],
+    minServing: 80,
+    maxServing: 200,
+    priority: 8
+  },
+  {
+    name: "Apple",
+    caloriesPer100g: 52,
+    protein: 0.3,
+    carbs: 14,
+    fats: 0.2,
+    dietType: ["veg","nonveg"],
+    macroType: "carb",
+    mealType: ["snack"],
+    minServing: 80,
+    maxServing: 200,
+    priority: 7
+  },
+  {
+    name: "Mango",
+    caloriesPer100g: 60,
+    protein: 0.8,
+    carbs: 15,
+    fats: 0.4,
+    dietType: ["veg","nonveg"],
+    macroType: "carb",
+    mealType: ["snack","breakfast"],
+    minServing: 80,
+    maxServing: 200,
+    priority: 5
+  },
+  {
+    name: "Papaya",
+    caloriesPer100g: 43,
+    protein: 0.5,
+    carbs: 11,
+    fats: 0.3,
+    dietType: ["veg","nonveg"],
+    macroType: "carb",
+    mealType: ["breakfast","snack"],
+    minServing: 80,
+    maxServing: 200,
+    priority: 6
+  },
+  {
+    name: "Watermelon",
+    caloriesPer100g: 30,
+    protein: 0.6,
+    carbs: 8,
+    fats: 0.2,
+    dietType: ["veg","nonveg"],
+    macroType: "carb",
+    mealType: ["snack"],
+    minServing: 100,
+    maxServing: 300,
+    priority: 6
+  }
+
 ];
